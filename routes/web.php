@@ -19,16 +19,16 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth', 'admingsfzsttylmszrteg'])->group(function () {
  
-    Route::get('admin/dashboard', [HomeController::class, 'index']);
+    Route::get('admingsfzsttylmszrteg/dashboard', [HomeController::class, 'index']);
  
-    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
-    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
-    Route::post('/admin/products/save', [ProductController::class, 'save'])->name('admin/products/save');
-    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
-    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
-    Route::get('/admin/products/delete/{id}', [ProductController::class, 'delete'])->name('admin/products/delete');
+    Route::get('/admingsfzsttylmszrteg/products', [ProductController::class, 'index'])->name('admin/products');
+    Route::get('/admingsfzsttylmszrteg/products/create', [ProductController::class, 'create'])->name('admin/products/create');
+    Route::post('/admingsfzsttylmszrteg/products/save', [ProductController::class, 'save'])->name('admin/products/save');
+    Route::get('/admingsfzsttylmszrteg/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
+    Route::put('/admingsfzsttylmszrteg/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
+    Route::get('/admingsfzsttylmszrteg/products/delete/{id}', [ProductController::class, 'delete'])->name('admin/products/delete');
 });
  
 require __DIR__.'/auth.php';
